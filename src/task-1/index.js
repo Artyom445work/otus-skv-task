@@ -1,6 +1,6 @@
 const numSum = (a, b) => {
 	if (isNaN(a) || isNaN(b)) {
-		throw new TypeError('One of arguments is not a number')
+		throw new Error('One of arguments is not a number')
 	}
 	return a + b
 }
