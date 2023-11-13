@@ -1,4 +1,4 @@
-const integersSum = (num1, num2) => {
+const getIntegersSum = (num1, num2) => {
 	if (isNaN(num1) || isNaN(num2)) {
 		throw new TypeError('One of arguments is not a number')
 	}
@@ -9,7 +9,7 @@ const integersSum = (num1, num2) => {
 	return sum
 }
 
-const multiplicationTable = (num) => {
+const getNumMultiplicationTable = (num) => {
 	if (isNaN(num)) {
 		throw new TypeError('Argument is not a number')
 	}
@@ -20,7 +20,7 @@ const multiplicationTable = (num) => {
 	return result
 }
 
-const averageNum = (num) => {
+const getAverageNum = (num) => {
 	if (isNaN(num)) {
 		throw new TypeError('Argument is not a number')
 	}
@@ -30,4 +30,4 @@ const averageNum = (num) => {
 	}, 0) / oddSequency.length
 }
 
-module.exports = { integersSum, multiplicationTable, averageNum }
+module.exports = { getIntegersSum, getNumMultiplicationTable, getAverageNum }

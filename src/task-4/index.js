@@ -15,8 +15,7 @@ const createAdmin = (user) => {
 }
 
 const getAdminKeys = (admin) => {
-	const {role, age} = admin
-	return [role, age]
+	return Object.keys(admin)
 }
 
 module.exports = { createUser, createAdmin, getAdminKeys }

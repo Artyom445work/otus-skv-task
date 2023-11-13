@@ -2,14 +2,14 @@ const {createUser} = require('./index')
 const {createAdmin} = require('./index')
 const {getAdminKeys} = require('./index')
 
-test('user object must be correct', () => {
+test('createUser function with param 23 must return object {age: 23}', () => {
 	expect(createUser(23)).toStrictEqual({age: 23})
 })
 
-test('admin object must be correct', () => {
+test('createAdmin function with param {age: 23} must return object {role: \'admin\', age: 23}', () => {
 	expect(createAdmin({age: 23})).toStrictEqual({role: 'admin', age: 23})
 })
 
-test('average number for sequency from 1 to 50 is ', () => {
-	expect(getAdminKeys({role: 'admin', age: 23})).toStrictEqual(['admin', 23])
+test('getAdminKeys function for object {role: \'admin\', age: 23} must return [\'admin\', 23]', () => {
+	expect(getAdminKeys({role: 'admin', age: 23})).toStrictEqual(['role', 'age'])
 })

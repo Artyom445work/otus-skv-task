@@ -1,4 +1,4 @@
-const elementsSum = (arr) => {
+const getElementsSum = (arr) => {
 	if (!Array.isArray(arr)) {
 		throw new Error('Argument is not an array')
 	}
@@ -10,18 +10,18 @@ const elementsSum = (arr) => {
 	}, 0)
 }
 
-const doubleElements = (arr) => {
+const getDoubledElements = (arr) => {
 	if (!Array.isArray(arr)) {
 		throw new Error('Argument is not an array')
 	}
 	return arr.map(value => value * 2)
 }
 
-const minMaxElements = (arr) => {
+const getMinMaxElements = (arr) => {
 	if (!Array.isArray(arr)) {
 		throw new Error('Argument is not an array')
 	}
 	return [Math.min(...arr), Math.max(...arr)]
 }
 
-module.exports = { elementsSum, doubleElements, minMaxElements }
+module.exports = { getElementsSum, getDoubledElements, getMinMaxElements }

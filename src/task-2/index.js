@@ -1,8 +1,11 @@
-const greatestNum = (num1, num2) => {
+const getGreatestNum = (num1, num2) => {
 	if (isNaN(num1) || isNaN(num2)) {
 		throw new TypeError('One of arguments is not a number')
 	}
-	return num1 > num2 ? num1 : num2
+	if (Math.abs(num1) >  Number.MAX_SAFE_INTEGER || Math.abs(num2) >  Number.MAX_SAFE_INTEGER) {
+		throw new TypeError('Max size of the type \'Number\' has been exceeded')
+	}
+	return Math.max(num1, num2)
 }
 
 const getMonthName = (monthNum) => {
@@ -46,4 +49,4 @@ const isCircleInSquare = (circle, square) => {
 	return circleRadius * 2 <= squareLine
 }
 
-module.exports = { greatestNum, getMonthName, isCircleInSquare }
+module.exports = { getGreatestNum, getMonthName, isCircleInSquare }
