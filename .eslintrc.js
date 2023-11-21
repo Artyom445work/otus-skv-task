@@ -4,7 +4,6 @@ module.exports = {
 		'es2020': true,
 		'node': true,
 		'commonjs': true,
-		'es6': true,
 		'jest': true
 	},
 	'extends': 'eslint:recommended',
@@ -29,12 +28,17 @@ module.exports = {
 		'no-var': [
 			'error'
 		],
-		'no-unused-vars': [
-			'warn'
-		],
 		'no-mixed-spaces-and-tabs': [
 			'warn'
 		],
 		'no-loss-of-precision': 'off'
-	}
+	},
+	overrides: [
+		{
+			files: ['.eslintrc.js', 'babel.config.js', 'jest.config.js'],
+			env: {
+				node: true, // Apply Node environment specifically for ESLint config
+			},
+		},
+	]
 }

@@ -1,6 +1,4 @@
-const {createUser} = require('./index')
-const {createAdmin} = require('./index')
-const {getAdminKeys} = require('./index')
+import {createUser, createAdmin, getAdminKeys} from './index'
 
 test('createUser function with param 23 must return object {age: 23}', () => {
 	expect(createUser(23)).toStrictEqual({age: 23})

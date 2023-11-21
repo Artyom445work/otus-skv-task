@@ -22,4 +22,4 @@ const getPow = (a, x) => {
 	return a ** x
 }
 
-module.exports = { getDiff, isWord, getPow }
+export { getDiff, isWord, getPow }

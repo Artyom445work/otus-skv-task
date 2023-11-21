@@ -1,6 +1,4 @@
-const {getDiff} = require('./index')
-const {isWord} = require('./index')
-const {getPow} = require('./index')
+import {getDiff, isWord, getPow} from './index.js'
 
 test('getDiff between 13 and 25 is 12', () => {
 	expect(getDiff(13, 25)).toBe(12)

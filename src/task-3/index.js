@@ -24,10 +24,7 @@ const getAverageNum = (num) => {
 	if (isNaN(num)) {
 		throw new TypeError('Argument is not a number')
 	}
-	const oddSequency = [...Array(num)].map((_, i) => i + 1).filter(value => value % 2)
-	return oddSequency.reduce((acc, value) => {
-		return acc + value
-	}, 0) / oddSequency.length
+	return Math.floor((num + 1) / 2)
 }
 
-module.exports = { getIntegersSum, getNumMultiplicationTable, getAverageNum }
+export { getIntegersSum, getNumMultiplicationTable, getAverageNum }

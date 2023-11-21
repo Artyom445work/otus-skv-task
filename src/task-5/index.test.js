@@ -1,8 +1,6 @@
-const {getElementsSum} = require('./index')
-const {getDoubledElements} = require('./index')
-const {getMinMaxElements} = require('./index')
+import {getElementsSum, getDoubledElements, getMinMaxElements} from './index'
 
-test('sum of array of 10 elements is 122', () => {
+test('sum of array of 10 elements [3, 6, 7, 8, 9, 11, 12, 13, 32, 21] is 122', () => {
 	expect(getElementsSum([3, 6, 7, 8, 9, 11, 12, 13, 32, 21])).toBe(122)
 })
 

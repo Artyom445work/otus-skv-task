@@ -18,4 +18,4 @@ const getAdminKeys = (admin) => {
 	return Object.keys(admin)
 }
 
-module.exports = { createUser, createAdmin, getAdminKeys }
+export { createUser, createAdmin, getAdminKeys }

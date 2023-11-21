@@ -13,12 +13,13 @@ const getStrLengths = (str1, str2) => {
 }
 
 const getDigitsSum = (threeDigitNum) => {
-	if (threeDigitNum.toString().length !== 3) {
+	const threeDigitNumStr = threeDigitNum.toString()
+	if (threeDigitNumStr.length !== 3) {
 		throw new Error('Number length is not 3')
 	}
-	return threeDigitNum.toString().split('').reduce((acc, value) => {
+	return threeDigitNumStr.split('').reduce((acc, value) => {
 		return acc + parseInt(value)
 	}, 0)
 }
 
-module.exports = { getNumSum, getStrLengths, getDigitsSum }
+export { getNumSum, getStrLengths, getDigitsSum }

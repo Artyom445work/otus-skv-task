@@ -24,4 +24,4 @@ const getMinMaxElements = (arr) => {
 	return [Math.min(...arr), Math.max(...arr)]
 }
 
-module.exports = { getElementsSum, getDoubledElements, getMinMaxElements }
+export { getElementsSum, getDoubledElements, getMinMaxElements }
