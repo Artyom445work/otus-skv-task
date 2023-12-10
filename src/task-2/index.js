@@ -12,32 +12,12 @@ const getMonthName = (monthNum) => {
 	if (!monthNum || monthNum > 12) {
 		throw new Error('monthNum is 0 or greater than 12')
 	}
-	switch (monthNum) {
-		case 1:
-			return 'январь'
-		case 2:
-			return 'февраль'
-		case 3:
-			return 'март'
-		case 4:
-			return 'апрель'
-		case 5:
-			return 'май'
-		case 6:
-			return 'июнь'
-		case 7:
-			return 'июль'
-		case 8:
-			return 'август'
-		case 9:
-			return 'сентябрь'
-		case 10:
-			return 'октябрь'
-		case 11:
-			return 'ноябрь'
-		case 12:
-			return 'декабрь'
-	}
+	const monthNames = [
+		'январь', 'февраль', 'март', 'апрель',
+		'май', 'июнь', 'июль', 'август',
+		'сентябрь', 'октябрь', 'ноябрь', 'декабрь'
+	]
+	return monthNames[monthNum - 1]
 }
 
 const isCircleInSquare = (circle, square) => {
