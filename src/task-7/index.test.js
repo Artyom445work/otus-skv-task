@@ -6,7 +6,7 @@ describe('paragraphsProcess tests', () => {
 		el = document.createElement('div')
 	})
 
-	it('is a function ', () => {
+	it('is a function test', () => {
 		expect(paragraphsProcess).toBeInstanceOf(Function)
 	})
 
